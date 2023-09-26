@@ -97,4 +97,8 @@ public function boot()
 }
 
 
-### 
+### comandos git
+git status
+git add .
+git commit -m "1/3 Migrations"
+git push -u origin main
