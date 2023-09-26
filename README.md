@@ -80,6 +80,9 @@ npm install
 ### criar migrations
 php artisan make:migration create_categories_table
 php artisan make:migration create_states_table
+php artisan make:migration alter_table_users_add_state --table=users
+php artisan make:migration create_advertises_table
+php artisan make:migration create_advertise_images_table   
 
 ### para criar as tabelas no banco
 php artisan migrate
@@ -97,8 +100,18 @@ public function boot()
 }
 
 
+### criar os models
+php artisan make:model State
+php artisan make:model Category
+php artisan make:model Advertise       
+
 ### comandos git
 git status
 git add .
 git commit -m "1/3 Migrations"
 git push -u origin main
+
+
+### site para diagramar banco de dados
+https://drawsql.app/teams/jonas-franco/diagrams/b7store
+
