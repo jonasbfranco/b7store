@@ -64,3 +64,37 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Comandos
+
+### subir servidor
+php artisan serve
+
+### instalar dependencias projeto quando baixado do git
+composer install
+
+### instalar dependencias front-end
+npm install 
+
+### criar migrations
+php artisan make:migration create_categories_table
+php artisan make:migration create_states_table
+
+### para criar as tabelas no banco
+php artisan migrate
+
+### para recriar as tabelas no banco
+php artisan migrate:fresh
+
+### erro  1071 Specified key was too long
+AppServiceProvider.php:
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+
+
+### 
