@@ -103,7 +103,12 @@ public function boot()
 ### criar os models
 php artisan make:model State
 php artisan make:model Category
-php artisan make:model Advertise       
+php artisan make:model Advertise   
+
+
+### criar component 
+php artisan make:component base/header
+php artisan make:component hero    
 
 ### comandos git
 git status

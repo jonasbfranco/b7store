@@ -12,51 +12,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-area">
-            <a href="" class="header-area-left">B7Store</a>
-            <div class="header-area-right">
-                <a href="login.html" class="my-account">
-                    <img src="assets/icons/userIcon.png" />
-                    Minha Conta
-                </a>
-                <a href="" class="announce-now">Anunciar agora →</a>
-                <img class="menu-icon" src="assets/icons/menuIcon.png" alt="Menu" />
-                <div class="menu-mobile">
-                    <a href="myAccount.html" class="my-account-mobile">
-                        <img src="assets/icons/userIcon.png" alt="Ícone do usuário" />
-                        Minha Conta
-                    </a>
-                    <a class="my-account-mobile" href="/index.html"><img src="assets/icons/logoutIcon.png" /> Sair</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <x-base.header />
     <main>
-        <section class="hero-area">
-            <h3 class="subtitle">Aqui você encontra o que tanto procura!</h3>
-            <h1 class="title">O que você está procurando?</h1>
-            <div class="search-area">
-                <input class="search-text" type="text" placeholder="Estou procurando por..." />
-                <select class="categories-options">
-                    <option selected hidden disabled value="">Categoria</option>
-                    <option value="cars">Carros</option>
-                    <option value="eletronics">Eletrônicos</option>
-                    <option value="clothes">Roupas</option>
-                    <option value="sports">Esporte</option>
-                    <option value="babies">Bebês</option>
-                </select>
-                <select class="states">
-                    <option selected hidden disabled value="">Estado</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="SP">São Paulo</option>
-                </select>
-                <button class="search-button">Procurar</button>
-            </div>
-        </section>
+        <x-hero />
         <div class="categories-area">
             <div class="title">Categorias</div>
             <div class="buttons">
@@ -128,10 +86,7 @@
             </div>
         </div>
     </main>
-    <footer>
-        <span>powered by B7Web</span>
-        <span>B7Store</span>
-    </footer>
+    <x-base.footer />
 </body>
 
 </html>
