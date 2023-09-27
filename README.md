@@ -110,6 +110,7 @@ git status
 git add .
 git commit -m "1/3 Migrations"
 git push -u origin main
+git pull
 
 
 ### site para diagramar banco de dados
