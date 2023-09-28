@@ -109,6 +109,7 @@ php artisan make:model Advertise
 ### criar component 
 php artisan make:component base/header
 php artisan make:component hero    
+php artisan make:component FilteredAdvertises
 
 ### comandos git
 git status
