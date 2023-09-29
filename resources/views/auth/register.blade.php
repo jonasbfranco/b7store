@@ -21,24 +21,40 @@
             <form method="POST" action="{{ route('register_action') }}">
                 @csrf
 
+                {{-- Trativa de erros
                 <div>
                     @if ($errors->any())
-                    <ul>
+                    <ul class="errors">
+
+                        Exibir todos os erros de uma vez
                         @foreach ($errors->all() as $error)
                             <li> {{ $error }} </li>
                         @endforeach
+
+                        Exibir um erro de cadas vez
+                        <li> {{ $errors->first() }}</li>
                     </ul>
                     @endif
-                </div>
+                </div> --}}
 
 
                 <div class="name-area">
                     <div class="name-label">Nome</div>
-                    <input type="text" name="name" placeholder="Digite o seu nome" />
+                    <input type="text" name="name" placeholder="Digite o seu nome" value="{{ @old('name') }}" />
+                    @error('name')
+                        <div class="error">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="email-area">
                     <div class="email-label">E-mail</div>
-                    <input type="email" name="email" placeholder="Digite o seu e-mail" />
+                    <input type="email" name="email" placeholder="Digite o seu e-mail" value="{{ @old('email') }}" />
+                    @error('email')
+                        <div class="error">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="password-area">
                     <div class="password-label">Senha</div>
@@ -46,6 +62,11 @@
                         <input name="password" type="password" placeholder="Digite a sua senha" />
                         <img src="assets/icons/eyeIcon.png" alt="Ícone mostrar senha" />
                     </div>
+                    @error('password')
+                        <div class="error">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="password-area">
                     <div class="password-label">Confirme sua Senha</div>

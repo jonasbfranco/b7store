@@ -139,3 +139,10 @@ php artisan vendor:publish --tag=laravel-pt-br-localization
 ### site para diagramar banco de dados
 https://drawsql.app/teams/jonas-franco/diagrams/b7store
 
+
+
+### key generate
+php artisan key:generate
+
+### ?
+php artisan storage:link
