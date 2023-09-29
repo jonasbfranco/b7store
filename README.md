@@ -111,12 +111,29 @@ php artisan make:component base/header
 php artisan make:component hero    
 php artisan make:component FilteredAdvertises
 
+
+### criando controllers
+php artisan make:controller AuthController
+
+
+### criando as requests
+php artisan make:request RegisterRequest
+
 ### comandos git
 git status
 git add .
 git commit -m "1/3 Migrations"
 git push -u origin main
 git pull
+
+
+### traducao dos erros para PORTUGUES BRASIL
+https://github.com/lucascudo/laravel-pt-BR-localization/tree/master
+php artisan lang:publish
+composer require lucascudo/laravel-pt-br-localization --dev
+php artisan vendor:publish --tag=laravel-pt-br-localization
+// Altere Linha 85 do arquivo config/app.php para:
+'locale' => 'pt_BR'
 
 
 ### site para diagramar banco de dados
