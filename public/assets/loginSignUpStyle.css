@@ -1,7 +1,20 @@
 :root {
   --footerHeight: 92px;
 }
-/* 
+
+/*
+* Errors
+*/
+.error {
+    background-color: rgba(255,0,0,0.2);
+    /* margin: 5px 0; */
+    padding: 5px 10px;
+}
+.is-invalid {
+    border: 1px solid rgba(255,0,0,0.2) !important;
+}
+
+/*
 * Back Buttom
 */
 .back-button {
@@ -17,11 +30,11 @@
   padding-top: 20px;
   text-decoration: none;
 }
-/* 
+/*
 * /Back Buttom
 */
 
-/* 
+/*
 * Login Page
 */
 .login-page {
@@ -143,7 +156,7 @@ form {
   margin-top: 44px;
   margin-bottom: 100px;
 }
-/* 
+/*
 * /Login Page
 */
 @media (max-width: 640px) {
