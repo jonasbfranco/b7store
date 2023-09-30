@@ -48,11 +48,12 @@
 .login-area {
   width: 100%;
   max-width: 640px;
-  height: 700px;
+  /* height: 700px; */
   border: 1px solid #e7e9ed;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 }
 .login-title {
   color: #5c7bfa;
