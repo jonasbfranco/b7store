@@ -1,3 +1,105 @@
+# Comandos
+
+### subir servidor
+```php
+php artisan serve
+```
+
+### instalar dependencias projeto quando baixado do git
+```php
+composer install
+```
+### instalar dependencias front-end
+```php
+npm install 
+```
+### criar migrations
+```php
+php artisan make:migration create_categories_table
+php artisan make:migration create_states_table
+php artisan make:migration alter_table_users_add_state --table=users
+php artisan make:migration create_advertises_table
+php artisan make:migration create_advertise_images_table   
+```
+### para criar as tabelas no banco
+```php
+php artisan migrate
+```
+### para recriar as tabelas no banco
+```php
+php artisan migrate:fresh
+```
+### erro  1071 Specified key was too long
+```terminal
+AppServiceProvider.php:
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+```
+
+### criar os models
+```php
+php artisan make:model State
+php artisan make:model Category
+php artisan make:model Advertise   
+```
+
+### criar component 
+```php
+php artisan make:component base/header
+php artisan make:component hero    
+php artisan make:component FilteredAdvertises
+```
+
+### criando controllers
+```php
+php artisan make:controller AuthController
+```
+
+### criando as requests
+```php
+php artisan make:request RegisterRequest
+```
+### comandos git
+```git
+git status
+git add .
+git commit -m "1/3 Migrations"
+git push -u origin main
+git pull
+```
+
+### traducao dos erros para PORTUGUES BRASIL
+```php
+https://github.com/lucascudo/laravel-pt-BR-localization/tree/master
+php artisan lang:publish
+composer require lucascudo/laravel-pt-br-localization --dev
+php artisan vendor:publish --tag=laravel-pt-br-localization
+// Altere Linha 85 do arquivo config/app.php para:
+'locale' => 'pt_BR'
+```
+
+### site para diagramar banco de dados
+```php
+https://drawsql.app/teams/jonas-franco/diagrams/b7store
+```
+
+### key generate
+```php
+php artisan key:generate
+```
+### ?
+```php
+php artisan storage:link
+```
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -65,84 +167,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-
-## Comandos
-
-### subir servidor
-php artisan serve
-
-### instalar dependencias projeto quando baixado do git
-composer install
-
-### instalar dependencias front-end
-npm install 
-
-### criar migrations
-php artisan make:migration create_categories_table
-php artisan make:migration create_states_table
-php artisan make:migration alter_table_users_add_state --table=users
-php artisan make:migration create_advertises_table
-php artisan make:migration create_advertise_images_table   
-
-### para criar as tabelas no banco
-php artisan migrate
-
-### para recriar as tabelas no banco
-php artisan migrate:fresh
-
-### erro  1071 Specified key was too long
-AppServiceProvider.php:
-use Illuminate\Support\Facades\Schema;
-
-public function boot()
-{
-    Schema::defaultStringLength(191);
-}
-
-
-### criar os models
-php artisan make:model State
-php artisan make:model Category
-php artisan make:model Advertise   
-
-
-### criar component 
-php artisan make:component base/header
-php artisan make:component hero    
-php artisan make:component FilteredAdvertises
-
-
-### criando controllers
-php artisan make:controller AuthController
-
-
-### criando as requests
-php artisan make:request RegisterRequest
-
-### comandos git
-git status
-git add .
-git commit -m "1/3 Migrations"
-git push -u origin main
-git pull
-
-
-### traducao dos erros para PORTUGUES BRASIL
-https://github.com/lucascudo/laravel-pt-BR-localization/tree/master
-php artisan lang:publish
-composer require lucascudo/laravel-pt-br-localization --dev
-php artisan vendor:publish --tag=laravel-pt-br-localization
-// Altere Linha 85 do arquivo config/app.php para:
-'locale' => 'pt_BR'
-
-
-### site para diagramar banco de dados
-https://drawsql.app/teams/jonas-franco/diagrams/b7store
-
-
-
-### key generate
-php artisan key:generate
-
-### ?
-php artisan storage:link
