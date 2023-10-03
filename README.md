@@ -73,8 +73,8 @@ git pull
 ```
 
 ### traducao dos erros para PORTUGUES BRASIL
-```php
 https://github.com/lucascudo/laravel-pt-BR-localization/tree/master
+```php
 php artisan lang:publish
 composer require lucascudo/laravel-pt-br-localization --dev
 php artisan vendor:publish --tag=laravel-pt-br-localization
